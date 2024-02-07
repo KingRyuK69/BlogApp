@@ -1,0 +1,5 @@
+      if (!req.file) {
+        let err = new Error("No file uploaded");
+        err.status = 400;
+        throw err;
+      } -> error check throw status
