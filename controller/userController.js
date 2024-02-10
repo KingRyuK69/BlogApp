@@ -26,6 +26,7 @@ const fileStorageEngine = multer.diskStorage({
   },
 });
 
+// for uploading profile image
 const upload = multer({
   storage: fileStorageEngine,
   limits: {
@@ -42,6 +43,7 @@ const upload = multer({
   },
 });
 
+//signup users
 const signup = async (req, res) => {
   const data = {
     fullname: req.body.fullname,
@@ -113,6 +115,7 @@ const signup = async (req, res) => {
   }
 };
 
+//login users
 const login = async (req, res) => {
   const { email, password } = req.body;
 
